@@ -2,14 +2,10 @@ package com.jobtracker.user.entity;
 
 import com.jobtracker.job.Job;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -22,7 +18,6 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 @NoArgsConstructor
-@AllArgsConstructor
 public class User {
 
     @Id
@@ -31,17 +26,12 @@ public class User {
     private Long id;
 
     @Column(name = "name", nullable = false)
-    @NotBlank(message = "Name is required")
-    @Size(min = 2, max = 100, message = "Name must be between 2 and 100 characters")
     private String name;
 
-    @NotBlank(message = "Email is required")
-    @Email(message = "Please provide a valid email address")
     @Column(name = "email", nullable = false, unique = true, length = 150)
     private String email;
 
     @Column(name = "password", nullable = false)
-    @Size(min = 8, message = "Password must be at least 8 characters long")
     private String password;
 
     @CreationTimestamp

@@ -1,4 +1,4 @@
-package com.jobtracker.job;
+package com.jobtracker.job.entity;
 
 public enum JobStatus {
     APPLIED,

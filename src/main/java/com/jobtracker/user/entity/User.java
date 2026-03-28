@@ -1,8 +1,7 @@
 package com.jobtracker.user.entity;
 
-import com.jobtracker.job.Job;
+import com.jobtracker.job.entity.Job;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

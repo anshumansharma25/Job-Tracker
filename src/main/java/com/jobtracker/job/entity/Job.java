@@ -1,4 +1,4 @@
-package com.jobtracker.job;
+package com.jobtracker.job.entity;
 
 import com.jobtracker.user.entity.User;
 import jakarta.persistence.*;
